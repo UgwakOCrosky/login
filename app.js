@@ -11,8 +11,5 @@ var app = new Vue({
     },
 
     methods: {
-        test() {
-            console.log(this.showingAddModal + " , " + this.showingEditModal + " , " + this.showingDeleteModal );
-        }
     }
 });
