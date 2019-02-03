@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login page</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+
+        <div id="root">
+            <div class="container">
+                <h1 class="fleft">List of users</h1>
+                <button class="fright addNew" @click="showingAddModal = true">Add New</button>
+                <div class="clear"></div>
+                <hr>
+
+                <table class="list">
+                    <tr>
+                        <th>ID</th>
+                        <th>UserName</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td><button @click="showingEditModal = true">Edit</button></td>
+                        <td><button @click="showingDeleteModal = true">Delete</button></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="modal" id="addModal" v-if="showingAddModal">
+                <div class="modalContainer">
+                    <div class="modalHeading">
+                        <p class="fleft">Add New User</p>
+                        <button class="fright close" @click="showingAddModal = false">x</button>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="modalContent">
+                        <table class="form">
+                            <tr>
+                                <th>Username</th>
+                                <th> : </th>
+                                <th><input type="text" name=""></th>
+                            </tr>
+
+                            <tr>
+                                <th>Email</th>
+                                <th> : </th>
+                                <th><input type="text" name=""></th>
+                            </tr>
+
+                            <tr>
+                                <th>Name</th>
+                                <th> : </th>
+                                <th><input type="text" name=""></th>
+                            </tr>
+
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th><button @click="showingAddModal = false">Save</button></th>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="editModal" v-if="showingEditModal">
+                <div class="modalContainer">
+                    <div class="modalHeading">
+                        <p class="fleft">Edit User</p>
+                        <button class="fright close" @click="showingEditModal = false">x</button>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="modalContent">
+                        <table class="form">
+                            <tr>
+                                <th>Username</th>
+                                <th> : </th>
+                                <th><input type="text" name=""></th>
+                            </tr>
+
+                            <tr>
+                                <th>Email</th>
+                                <th> : </th>
+                                <th><input type="text" name=""></th>
+                            </tr>
+
+                            <tr>
+                                <th>Name</th>
+                                <th> : </th>
+                                <th><input type="text" name=""></th>
+                            </tr>
+
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th><button @click="showingEditModal = false">Update</button></th>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="deleteModal" v-if="showingDeleteModal">
+                <div class="modalContainer">
+                    <div class="modalHeading">
+                        <p class="fleft">Delete User</p>
+                        <button class="fright close" @click="showingDeleteModal = false">x</button>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="modalContent">
+                        <p>You are going to delete ...</p>
+                        <br><br><br><br><br>
+                        <button @click="showingDeleteModal = false">Yes</button>
+                        <button @click="showingDeleteModal = false">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="vue.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>

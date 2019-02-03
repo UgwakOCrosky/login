@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 960px;
+    margin: auto;
+    margin-top: 44px;
+}
+
+.fleft {
+    float: left;
+}
+
+.fright {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+.addNew {
+    padding: 2px 9px;
+}
+
+table.list {
+    width: 100%;
+    margin-top: 33px;
+}
+
+table.list th{
+     background: blue;
+     color: white;
+ }
+
+table.list td{
+    padding: 9px;
+    text-align: center;
+}
+
+table.list tr{
+    background: navajowhite;
+}
+
+button{
+    padding: 2px 9px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(500,500,50, 0.4);
+}
+
+.modalContainer {
+    width: 555px;
+    background: white;
+    margin: auto;
+    margin-top: 44px;
+}
+
+.modalHeading {
+    padding: 9px;
+    background: blue;
+    color: white;
+}
+
+.modalContent {
+    min-height: 333px;
+    padding: 44px;
+}
+
+.close {
+    background: brown;
+    padding: 3px 9px;
+    border: none;
+}
+
+table.form input, table.form td{
+    padding: 6px;
+}
